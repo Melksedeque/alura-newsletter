@@ -1,9 +1,35 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState } from "react";
 
 export default function ToggleTheme() {
+  const [theme, setTheme] = useState(null);
+  const systemPreference = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const appClasses = document.documentElement.classList;
+
+  useEffect(() => {
+    const isDarkMode =
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && systemPreference);
+
+    appClasses.toggle("dark", isDarkMode);
+
+    setTheme(isDarkMode ? "dark" : "light");
+  }, []);
+
   const toggle = () => {
-    document.documentElement.classList.toggle("dark");
+    if (document.documentElement.classList.contains("dark")) {
+      appClasses.remove("dark");
+      localStorage.theme = "light";
+      setTheme("light");
+    } else {
+      appClasses.add("dark");
+      localStorage.theme = "dark";
+      setTheme("dark");
+    }
   };
+
   return (
     <div className="hidden sm:block">
       <MoonIcon
