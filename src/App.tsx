@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen sm:p-5">
       <Header user={user} />
       {hasUser && <ArticleList />}
       {hasUser || <Form onSubmit={handleSubmit} />}
