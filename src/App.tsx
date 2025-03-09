@@ -7,11 +7,16 @@ import Form from "./components/Form";
 function App() {
   const [user, setUser] = useState<User | undefined>();
   const hasUser = Boolean(user);
+
+  const handleSubmit = (name: string, email: string) => {
+    setUser({ name, email });
+  };
+
   return (
     <>
       <Header user={user} />
       {hasUser && <ArticleList />}
-      {hasUser || <Form onSubmit={setUser} />}
+      {hasUser || <Form onSubmit={handleSubmit} />}
     </>
   );
 }
