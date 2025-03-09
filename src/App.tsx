@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { User } from './types/Form';
+import { User } from "./types/Form";
 import ArticleList from "./components/ArticleList";
 import Header from "./components/Header";
 import Form from "./components/Form";
@@ -13,11 +13,11 @@ function App() {
   };
 
   return (
-    <>
+    <div className="h-screen">
       <Header user={user} />
       {hasUser && <ArticleList />}
       {hasUser || <Form onSubmit={handleSubmit} />}
-    </>
+    </div>
   );
 }
 
