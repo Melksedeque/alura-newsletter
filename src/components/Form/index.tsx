@@ -41,7 +41,7 @@ export default function Form({ onSubmit }: FormProps) {
       />
       <button
         type="submit"
-        className="bg-alura-100 dark:bg-dark-200 cursor-pointer rounded-full text-gray-200 py-2 px-5 uppercase outline-none w-xs hover:animate-pulse hover:shadow-sm hover:shadow-gray-500 hover:dark:shadow-black"
+        className="bg-alura-100 dark:bg-dark-200 cursor-pointer rounded-full text-gray-200 py-2 px-5 uppercase outline-none w-xs hover:animate-pulse hover:shadow-sm hover:shadow-gray-500 hover:dark:shadow-black transition duration-300"
       >
         Enviar
       </button>
