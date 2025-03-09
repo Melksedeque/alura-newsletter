@@ -16,10 +16,6 @@
   --dark-mode: class;
 }
 
-@plugin {
-  ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
-}
-
 @layer components {
   .input-form-login {
     @apply bg-white dark:bg-dark-200
