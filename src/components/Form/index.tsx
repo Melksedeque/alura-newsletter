@@ -1,6 +1,6 @@
 // Usar typescript para validar os tipos dos campos e as variáveis
 
-import { FormProps } from '../../types/Form';
+import { FormProps } from "../../types/Form";
 
 export default function Form({ onSubmit }: FormProps) {
   const safeSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,10 +13,18 @@ export default function Form({ onSubmit }: FormProps) {
   };
 
   return (
-    <form onSubmit={safeSubmit}>
+    <form
+      onSubmit={safeSubmit}
+      className="h-full flex flex-col items-center justify-center gap-10 -mt-20"
+    >
       <input type="text" name="name" placeholder="Insira seu Name" />
       <input type="email" name="email" placeholder="Insira seu Email" />
-      <button type="submit">Enviar</button>
+      <button
+        type="submit"
+        className="bg-alura-100 dark:bg-dark-200 cursor-pointer rounded-full text-gray-200 py-1 px-5 uppercase"
+      >
+        Enviar
+      </button>
     </form>
   );
 }
