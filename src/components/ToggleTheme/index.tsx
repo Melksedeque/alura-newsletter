@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 
 export default function ToggleTheme() {
-  const [theme, setTheme] = useState(null);
+  const [theme, setTheme] = useState<"dark" | "light">("light");
   const systemPreference = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
