@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 
 export default function ToggleTheme() {
-  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const [, setTheme] = useState<"dark" | "light">("light");
   const systemPreference = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
@@ -22,11 +22,9 @@ export default function ToggleTheme() {
     if (document.documentElement.classList.contains("dark")) {
       appClasses.remove("dark");
       localStorage.theme = "light";
-      setTheme("light");
     } else {
       appClasses.add("dark");
       localStorage.theme = "dark";
-      setTheme("dark");
     }
   };
 
