@@ -8,7 +8,7 @@ export default function Article({
   alt,
 }: ArticleProps) {
   return (
-    <article className="article flex flex-col items-center gap-2 p-5 transition duration-300 bg-gray-200 dark:bg-dark-200 sm:rounded-2xl sm:shadow-lg sm:dark:shadow-gray-950 sm:hover:shadow-gray-200 sm:hover:shadow-lg sm:dark:hover:shadow-none">
+    <article className="article">
       <h2 className="text-xl text-alura-200 dark:text-gray-200 font-bold">
         {title}
       </h2>
