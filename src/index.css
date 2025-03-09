@@ -16,11 +16,16 @@
   --dark-mode: class;
 }
 
+@plugin {
+  ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
+}
+
 @layer components {
   .input-form-login {
     @apply bg-white dark:bg-dark-200
       text-dark-200 dark:text-gray-200
       border-2 border-white dark:border-dark-200
+      caret-alura-200 dark:caret-alura-100
       outline-none
       px-5 py-2
       rounded-full
@@ -49,5 +54,18 @@
       p-5
       transition duration-300
       sm:rounded-2xl sm:shadow-lg sm:dark:shadow-gray-950 sm:hover:shadow-gray-200 sm:hover:shadow-lg sm:dark:hover:shadow-none;
+  }
+
+  .article-tag {
+    @apply bg-alura-100 dark:bg-dark-100
+    cursor-pointer
+    font-bold
+    px-4 py-1
+    transition duration-300
+    rounded-full
+    text-gray-200
+    text-xs
+    uppercase
+    hover:bg-gradient-to-r hover:from-alura-200 hover:scale-110;
   }
 }
