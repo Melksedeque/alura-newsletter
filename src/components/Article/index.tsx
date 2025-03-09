@@ -14,10 +14,7 @@ export default function Article({
       </h2>
       <ul className="w-full justify-end gap-2 p-0 m-0 hidden sm:flex">
         {tags.map((tag) => (
-          <li
-            key={tag}
-            className="bg-alura-100 dark:bg-dark-100 cursor-pointer px-4 py-1 transition duration-300 rounded-full text-gray-200 font-bold text-xs uppercase hover:bg-alura-200 hover:scale-110"
-          >
+          <li key={tag} className="article-tag">
             {tag}
           </li>
         ))}
