@@ -1,17 +1,26 @@
-import data from "./articles.json";
-
-export default function Article() {
-  {
-    data.map((article) => (
-      <div className="article" key={article.id}>
-        <h2>{article.title}</h2>
-        <p>{article.text}</p>
-        <ul>
-          {article.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      </div>
-    ));
-  }
+export default function Article({ title, text, tags, image, alt }) {
+  return (
+    <article className="article flex flex-col items-center gap-2 p-5 bg-gray-200 dark:bg-dark-200 sm:rounded-2xl sm:shadow-lg">
+      <h2 className="text-xl text-alura-200 dark:text-gray-200 font-bold">
+        {title}
+      </h2>
+      <ul className="w-full justify-end gap-2 p-0 m-0 hidden sm:flex">
+        {tags.map((tag) => (
+          <li
+            key={tag}
+            className="bg-alura-100 dark:bg-dark-100 px-4 py-1 rounded-full text-gray-200 font-bold text-xs uppercase"
+          >
+            {tag}
+          </li>
+        ))}
+      </ul>
+      <p className="text-alura-200 dark:text-gray-400">{text}</p>
+      {image && (
+        <figure>
+          <img src={image} alt={alt} className="sm:p-4" />
+          {alt && <figcaption className="sr-only">{alt}</figcaption>}
+        </figure>
+      )}
+    </article>
+  );
 }
