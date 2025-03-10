@@ -1,59 +1,4 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
-
-# Projeto Organo - Pessoas e Times - React.JS
+# Alura Newsletter
 
 ![Tela Principal](./screenshot/tela-principal.png)
 
@@ -81,15 +26,45 @@ export default tseslint.config({
 
 ## Descrição
 
+O Alura Newsletter é uma aplicação web moderna que permite aos usuários visualizar e interagir com artigos da comunidade Alura.
+
 ### Principais recursos incluem:
+- Sistema de autenticação de usuário
+- Lista de artigos dinâmica
+- Alternância entre tema claro e escuro
+- Interface responsiva
+- Suporte para tags em artigos
 
 ### Proximos passos de desenvolvimento
 
 ## Tecnologias Utilizadas
+- React 18 com TypeScript
+- Vite como bundler e dev server
+- Tailwind CSS para estilização
+- Heroicons para ícones
+- ESLint para linting
+- SWC para compilação rápida
 
 ## Estrutura de Pastas
 
+```
+src/
+├── components/
+│   ├── Article/
+│   ├── ArticleList/
+│   ├── Form/
+│   ├── Header/
+│   ├── Input/
+│   └── ToggleTheme/
+├── types/
+├── App.tsx
+└── main.tsx
+```
+
 ### Arquivos Principais:
+- `App.tsx`: Componente principal da aplicação
+- `components/`: Componentes reutilizáveis
+- `types/`: Definições de tipos TypeScript
 
 ## Como Instalar e Rodar o Projeto
 
