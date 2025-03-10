@@ -29,6 +29,7 @@
 O Alura Newsletter é uma aplicação web moderna que permite aos usuários visualizar e interagir com artigos da comunidade Alura.
 
 ### Principais recursos incluem:
+
 - Sistema de autenticação de usuário
 - Lista de artigos dinâmica
 - Alternância entre tema claro e escuro
@@ -38,6 +39,7 @@ O Alura Newsletter é uma aplicação web moderna que permite aos usuários visu
 ### Proximos passos de desenvolvimento
 
 ## Tecnologias Utilizadas
+
 - React 18 com TypeScript
 - Vite como bundler e dev server
 - Tailwind CSS para estilização
@@ -62,6 +64,7 @@ src/
 ```
 
 ### Arquivos Principais:
+
 - `App.tsx`: Componente principal da aplicação
 - `components/`: Componentes reutilizáveis
 - `types/`: Definições de tipos TypeScript
@@ -76,7 +79,7 @@ src/
 
 ## Projeto ao Vivo
 
-Você pode ver o projeto ao vivo neste link: [Link para Vercel]()
+Você pode ver o projeto ao vivo neste link: [Alura Newsletter](https://alura-newsletter-gilt.vercel.app)
 
 ## Fluxo de Dados
 
