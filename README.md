@@ -26,7 +26,7 @@
 
 ## Descrição
 
-O Alura Newsletter é uma aplicação web moderna que permite aos usuários visualizar e interagir com artigos da comunidade Alura.
+Este projeto consiste no desenvolvimento do Alura Newsletter, uma aplicação web moderna construída para otimizar a visualização e a interação com os artigos da comunidade Alura. As principais tecnologias empregadas possibilitaram a implementação de funcionalidades como um sistema de autenticação de usuários, uma listagem dinâmica de artigos, suporte a temas claro e escuro, design responsivo e categorização por tags.
 
 ### Principais recursos incluem:
 
@@ -35,8 +35,6 @@ O Alura Newsletter é uma aplicação web moderna que permite aos usuários visu
 - Alternância entre tema claro e escuro
 - Interface responsiva
 - Suporte para tags em artigos
-
-### Proximos passos de desenvolvimento
 
 ## Tecnologias Utilizadas
 
