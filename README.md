@@ -1,5 +1,7 @@
 # Alura Newsletter
 
+O Alura Newsletter é uma aplicação web moderna que permite aos usuários visualizar e interagir com artigos da comunidade Alura.
+
 ![Tela Principal](./screenshot/tela-principal.png)
 
 ## Menu
